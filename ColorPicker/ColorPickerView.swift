@@ -218,7 +218,7 @@ extension ColorPickerView {
                 var hue: CGFloat = 0
                 var saturation: CGFloat = 0
                 var alpha: CGFloat = 0
-                var rgb = RGB(red: 0, green: 0, blue: 0, alpha: 0)
+                var rgb = RGB(red: 0, green: 0, blue: 0, alpha: selectedHSB.alpha)
 
                 let point = CGPoint(x: x, y: y)
                 getHSValue(at: point, hue: &hue, saturation: &saturation)
