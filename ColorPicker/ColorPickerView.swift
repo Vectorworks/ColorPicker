@@ -229,7 +229,7 @@ extension ColorPickerView {
                         alpha = 1.0
                     }
 
-                    let hsb = HSB(hue: hue, saturation: saturation, brightness: selectedHSB.brightness, alpha: alpha)
+                    let hsb = HSB(hue: hue, saturation: saturation, brightness: selectedHSB.brightness, alpha: selectedHSB.alpha)
                     rgb = ColorSpaceConverter.convertToRGB(hsb: hsb)
                 }
                 let offset = Int(4 * (x + y * colorWheelDiameter))
