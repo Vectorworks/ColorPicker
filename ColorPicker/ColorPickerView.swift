@@ -116,8 +116,7 @@ public class ColorPickerView: UIView {
     /// - Parameter alpha: The new alpha components
     public func updateAlpha(_ alpha: CGFloat) {
         selectedHSB.alpha = alpha
-        layer.contents = createHSColorWheelImage(size: frame.size)
-        updateIndicatorToSelectedColorIfNotHidden()
+        self.updateSelectedColor(selectedHSB.color)
         delegate?.colorPickerDidSelectColor(self)
     }
 
@@ -230,7 +229,7 @@ extension ColorPickerView {
                         alpha = 1.0
                     }
 
-                    let hsb = HSB(hue: hue, saturation: saturation, brightness: selectedHSB.brightness, alpha: selectedHSB.alpha)
+                    let hsb = HSB(hue: hue, saturation: saturation, brightness: selectedHSB.brightness, alpha: alpha)
                     rgb = ColorSpaceConverter.convertToRGB(hsb: hsb)
                 }
                 let offset = Int(4 * (x + y * colorWheelDiameter))
