@@ -116,7 +116,8 @@ public class ColorPickerView: UIView {
     /// - Parameter alpha: The new alpha components
     public func updateAlpha(_ alpha: CGFloat) {
         selectedHSB.alpha = alpha
-        self.updateSelectedColor(selectedHSB.color)
+        layer.contents = createHSColorWheelImage(size: frame.size)
+        updateIndicatorToSelectedColorIfNotHidden()
         delegate?.colorPickerDidSelectColor(self)
     }
 
