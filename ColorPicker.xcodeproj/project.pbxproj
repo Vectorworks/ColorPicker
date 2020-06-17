@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3966CA249A30AA0090FAE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3966C9249A30AA0090FAE1 /* UIKit.framework */; };
+		4B3966CC249A30B10090FAE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3966CB249A30B10090FAE1 /* Foundation.framework */; };
+		4B3966CE249A30B60090FAE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3966CD249A30B60090FAE1 /* CoreGraphics.framework */; };
 		9668C54C217AE63C0021FC09 /* ColorSpaceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9668C54B217AE63C0021FC09 /* ColorSpaceConverter.swift */; };
 		9668C54E217B0DCD0021FC09 /* ColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9668C54D217B0DCD0021FC09 /* ColorPickerViewDelegate.swift */; };
 		9668C550217B29BF0021FC09 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9668C54F217B29BF0021FC09 /* UIColorExtension.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B3966C9249A30AA0090FAE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B3966CB249A30B10090FAE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B3966CD249A30B60090FAE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9668C54B217AE63C0021FC09 /* ColorSpaceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSpaceConverter.swift; sourceTree = "<group>"; };
 		9668C54D217B0DCD0021FC09 /* ColorPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewDelegate.swift; sourceTree = "<group>"; };
 		9668C54F217B29BF0021FC09 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -48,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3966CE249A30B60090FAE1 /* CoreGraphics.framework in Frameworks */,
+				4B3966CA249A30AA0090FAE1 /* UIKit.framework in Frameworks */,
+				4B3966CC249A30B10090FAE1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B3966C8249A30AA0090FAE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B3966CD249A30B60090FAE1 /* CoreGraphics.framework */,
+				4B3966CB249A30B10090FAE1 /* Foundation.framework */,
+				4B3966C9249A30AA0090FAE1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		966E577A217A0A2B009CBABF = {
 			isa = PBXGroup;
 			children = (
 				966E5786217A0A2B009CBABF /* ColorPicker */,
 				966E5791217A0A2C009CBABF /* ColorPickerTests */,
 				966E5785217A0A2B009CBABF /* Products */,
+				4B3966C8249A30AA0090FAE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,7 +195,7 @@
 				};
 			};
 			buildConfigurationList = 966E577E217A0A2B009CBABF /* Build configuration list for PBXProject "ColorPicker" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -388,6 +408,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,6 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
